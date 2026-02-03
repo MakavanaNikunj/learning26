@@ -27,6 +27,9 @@ def news(request):
 def shows(request):
     return render(request,"shows.html")
 
+def gaming(request):
+    return render(request,"gaming.html")
+
 def recipe(request):
     ingredient = ["maggie","tomato"]
     data = {"name":"maggie","time":20, "ingredient" : ingredient}   
