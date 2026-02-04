@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Name Is : {{name}}</h1>
+    <h3>My Age Is : {{age}}</h3>
+    <h2>My City Is : {{city}}</h2>
+    <h5>My Xender IS : {{xender}}</h5>
+    
+    {% for i in  data %}
+
+    <h1> {{i}}  </h1>
+
+
+    {% endfor %}
+
+     <h1> IF Condition </h1>
+     {% if age <= 25 %}
+        <h1> you are youngest men </h1>
+     {% else %}: 
+         <h2> you are child </h2>
+
+      {%  endif  %}
+ 
+
+</body>
+</html> 

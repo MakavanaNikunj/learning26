@@ -18,6 +18,9 @@ def AboutUse(reqest):
 def contactus(request):
     return render(request,"contactus.html")
 
+def home(request):
+    return render(request,"home.html")
+
 def movies(request):
     return render(request,"movies.html")
 
