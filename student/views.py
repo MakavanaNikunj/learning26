@@ -9,7 +9,7 @@ def studentDashboard(request):
     return render(request,"student/studentDashboard.html")
 
 def studentData(request):
-    data = {"name":"nikunj","age":21,"city":"Ahmedabad","xender":"male"}
+    data = {"name":"nikunj","age":21,"city":"Ahmedabad","gender":"male"}
     return render(request,"student/studentData.html",data)
 
 
