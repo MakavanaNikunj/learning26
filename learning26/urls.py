@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from.import views
 from django.urls import include
+from django.urls import include
 
 #localhost:8000/test/about/
 urlpatterns = [
@@ -36,6 +37,10 @@ urlpatterns = [
 
 
 
-    #app level url confing
-    path("student/",include("student.urls"))
+    #app level url confing of student application
+    path("student/",include("student.urls")),  
+
+    #app level url confing of parking application
+    path("employee/",include("employee.urls"))
+
 ]
