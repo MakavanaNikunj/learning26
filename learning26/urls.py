@@ -40,7 +40,8 @@ urlpatterns = [
     #app level url confing of student application
     path("student/",include("student.urls")),  
 
-    #app level url confing of parking application
-    path("employee/",include("employee.urls"))
+    path("employee/",include("employee.urls")),
+
+    path("parking/",include("parking.urls")),
 
 ]
