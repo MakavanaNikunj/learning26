@@ -1,0 +1,310 @@
+/* ---------------- Reset ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+    background: linear-gradient(135deg, #6ea56e, #c14921); /* Gradient purple-blue */
+    color: #fff;
+    padding: 15px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Logo */
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+    font-family: 'Fredoka One', cursive;
+}
+
+/* Nav Links Container */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Nav Links */
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 10px;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Hover underline */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #ffdd59;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hover background change */
+.nav-links a:hover {
+    background: rgba(255, 221, 89, 0.2);
+    color: #fff;
+}
+
+/* ---------------- Content ---------------- */
+.content {
+    text-align: center;
+    margin: 35px auto;
+    padding: 45px 30px;
+    max-width: 950px;
+    min-height: 480px;
+    background: linear-gradient(145deg, #9aadba, #a2749d); /* pink gradient */
+    border-radius: 25px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Content hover animation */
+.content:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* ---------------- Form Inputs ---------------- */
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form select {
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 450px;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form select:focus {
+    border-color: #0af7db;
+    box-shadow: 0 0 8px #9688a4;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 19px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+}
+
+form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* ---------------- Table ---------------- */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.content table th,
+.content table td {
+    border: 1px solid #ddd;
+    padding: 14px 18px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.content table th {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Table striped & hover effects */
+.content table tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.15);
+}
+.content table tr:hover {
+    background-color: rgba(255,255,255,0.25);
+    transform: scale(1.02);
+}
+
+/* Action links */
+.content table a {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #fff;
+    background: #ff6f61; /* coral button */
+    transition: all 0.3s ease;
+}
+
+.content table a:hover {
+    background: #ffdd59;
+    color: #000;
+    transform: scale(1.12) rotate(-2deg);
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+    background: linear-gradient(135deg, #74764f, #bd7c1a);
+    color: #fff;
+    padding: 18px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    margin-top: 25px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    font-family: 'Roboto Slab', serif;
+    transition: all 0.3s ease;
+}
+
+.footer:hover {
+    background: linear-gradient(135deg, #ff9a9e, #ff6f61);
+    transform: translateY(-3px) scale(1.01);
+}
+
+/* ---------------- Headings & Links ---------------- */
+h1, h2, h3 {
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    font-family: 'Fredoka One', cursive;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+/* ---------------- Extra Animations ---------------- */
+button, input[type="submit"] {
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* ---------------- Additional 10–15 tweaks ---------------- */
+/* 1. Add subtle shadow to form labels */
+label {
+    font-weight: 600;
+    color: #333;
+    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+/* 2. Rounded tables */
+.content table th:first-child,
+.content table td:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.content table th:last-child,
+.content table td:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* 3. Hover scale on content images (if any) */
+.content img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* 4. Fancy placeholder color */
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* 5. Smooth shadow on hover for content paragraphs */
+.content p:hover {
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+/* 6. Button shadow pulse on hover */
+form input[type="submit"]:hover {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 8px 15px rgba(0,0,0,0.3); }
+    100% { box-shadow: 0 12px 25px rgba(0,0,0,0.45); }
+}
+
+/* 7. Smooth table row transition */
+.content table tr {
+    transition: all 0.3s ease-in-out;
+}
+
+/* 8. Highlight even table rows with soft gradient */
+.content table tr:nth-child(even) {
+    background: linear-gradient(90deg, #ffe6e6, #ffd9d9);
+}
+
+/* 9. Make footer text glow slightly on hover */
+.footer:hover p {
+    text-shadow: 1px 1px 6px rgba(255,255,255,0.7);
+}
+
+/* 10. Nav link rotate hover */
+.nav-links a:hover {
+    transform: rotate(-2deg) scale(1.05);
+}
+
+/* 11. Smooth transition for all colors and transform */
+* {
+    transition: all 0.4s ease;
+}
+
+/* 12. Additional gradient text for headings */
+h1 {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

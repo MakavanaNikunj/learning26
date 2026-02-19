@@ -1,5 +1,5 @@
 from django import forms
-from .models import Employee
+from .models import Employee,Course,StudentProfile1,Animal
 
 
 #employee forms
@@ -8,6 +8,28 @@ from .models import Employee
 class EmployeeForm(forms.ModelForm):
     class Meta:
        model = Employee
-       fields = '__all__'    
+       fields = '__all__' 
+
+
+class CourseForm(forms.ModelForm):
+    class Meta:
+        model = Course
+        fields ='__all__'  
+
+
+class StudentForm(forms.ModelForm):
+    class Meta:
+        model= StudentProfile1
+        fields = '__all__'    
+
+
+class AnimalForm(forms.ModelForm):
+    class Meta:
+        model = Animal
+        fields = '__all__'                   
+
+
+
+
 
      

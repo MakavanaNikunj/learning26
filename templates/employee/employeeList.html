@@ -1,7 +1,11 @@
-<h1> i am empoyeelist  table </h1>
+{% extends 'base.html' %}
+{% block content %}
+<h1> Employee List Table </h1>
 
-
-
+<a href = "{%url 'accending'%}">ASC</a>
+<a href = "{%url 'deccending'%}">DESC</a>
+<a href = "{%url 'filterEmployee'%}">Filter Employee</a>
+<a href = "{% url 'createEmployeeWithForm'%}">Crate Employee</a>
 
 <table>
     <thead>
@@ -12,6 +16,9 @@
             <th>salary</th>
             <th>join_Date</th>
             <th>Post</th>
+            <th>Action-1</th>
+            <th>Action-2</th>
+
         </tr>
     </thead>
     <tbody>
@@ -23,8 +30,15 @@
             <td>{{emp.salary}}</td>
             <td>{{emp.join_date}}</td>
             <td>{{emp.post}}</td>
+            <td> 
+             <a href="{% url 'deleteEmployee' emp.id %}">DELETE</a>
+            </td>
+           <td> 
+            <a href="{%url 'updateEmployee' emp.id %}">UPDATE</a>
+           </td>
         </tr>
         {% endfor %}
 
     </tbody>
 </table>
+{% endblock content %}

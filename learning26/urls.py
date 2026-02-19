@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from.import views
 from django.urls import include
-from django.urls import include
+
 
 #localhost:8000/test/about/
 urlpatterns = [
