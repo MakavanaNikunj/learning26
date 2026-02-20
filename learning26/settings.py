@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'student',
     'employee',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'parking',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +128,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =  [
     BASE_DIR / "static",
 ]
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"

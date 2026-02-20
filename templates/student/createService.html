@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.non_field_errors }}
+
+    <div>
+        {{ form.serviceName.label_tag }}
+        {{ form.serviceName|add_class:"form-control" }}
+
+        <div style="color:red">{{ form.serviceName.errors }}</div>
+    </div>
+
+    <div>
+        {{ form.serviceDiscription.label_tag }}
+        {{ form.serviceDiscription|add_class:"form-control" }}
+        <div style="color:red">{{ form.serviceDiscription.errors }}</div>
+    </div>
+
+    <div>
+        {{ form.servicePrice.label_tag }}
+        {{ form.servicePrice |add_class:"form-control"}}
+        <div style="color:red">{{ form.servicePrice.errors }}</div>
+    </div>
+
+    <div>
+        {{ form.descount.label_tag }}
+        {{ form.descount |add_class:"form-control"}}
+        <div style="color:red">{{ form.descount.errors }}</div>
+    </div>
+
+    <div>
+        {{ form.categoryId.label_tag }}
+        {{ form.categoryId |add_class:"form-control" }}
+        <div style="color:red">{{ form.categoryId.errors }}</div>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Create Service</button>
+
+</form>
+
+{% endblock %}
