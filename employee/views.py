@@ -106,15 +106,11 @@ def createEmployeeWithForm(request):
            form = EmployeeForm()
            return render(request,"employee/createEmployeeForm.html",{"form":form})     
          
-def createStudent(request):
-     Employee.objects.create(name="nikunj",age="21",salary="21000",join_date="2022-2-25",post="Hr")
-     
-     return HttpResponse("student is created....--->")
 
 
 def deleteEmployee(request,id):
      
-     # print("id from url = ",id)
+     # print("id from url = ",id)       
      Employee .objects.filter(id=id).delete()
      return redirect(employeeList)
 

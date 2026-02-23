@@ -52,7 +52,7 @@ class Animal(models.Model):
     flying = models.CharField(max_length=20,choices=flying)
 
 
-    class meta:
+    class Meta:
         db_table = "animal"
 
     def __str__(self):

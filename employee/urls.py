@@ -7,7 +7,6 @@ urlpatterns = [
       path('employeeFilter/', views.employeeFilter),
       path('createEmployee/', views.createEmployee),
       path('createEmployeeWithForm/',views.createEmployeeWithForm,name="createEmployeeWithForm"),
-      path('createstudent/',views.createStudent),
       path('deleteEmployee/<int:id>',views.deleteEmployee,name = "deleteEmployee"),
       path('filterEmployee/',views.filterEmployee,name="filterEmployee"),
       path('sortEmployee/asc/', views.sortEmployeeAsc, name="accending"),
